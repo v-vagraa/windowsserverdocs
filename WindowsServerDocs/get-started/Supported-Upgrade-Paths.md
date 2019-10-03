@@ -100,7 +100,7 @@ If the server is running an evaluation version of Windows Server 2016 Standard o
 
 1.	If the server is a **domain controller**, you cannot convert it to a retail version. In this case, install an additional domain controller on a server that runs a retail version and remove AD DS from the domain controller that runs on the evaluation version. For more information, see [Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012](https://technet.microsoft.com/library/hh994618.aspx).
 2.	Read the license terms.
-3.	From an elevated command prompt, determine the current edition name with the command **DISM /online /Get-CurrentEdition**. Make note of the edition ID, an abbreviated form of the edition name. Then run **DISM /online /Set-Edition:\<edition ID\> /ProductKey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX /AcceptEula**, providing the edition ID and a retail product key. The server will restart twice.
+3.	From an elevated command prompt, determine the current edition name with the command **DISM /online /Get-TargetEditions**. Make note of the edition IDs available, an abbreviated form of the edition name. Then run **DISM /online /Set-Edition:\<edition ID\> /ProductKey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX /AcceptEula**, providing the edition ID and a retail product key. The server will restart twice.
 
 For the evaluation version of Windows Server 2016 Standard, you can also convert to the retail version of Windows Server 2016 Datacenter in one step using this same command and the appropriate product key.
 
